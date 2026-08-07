@@ -427,16 +427,5 @@ Current Progress
 - Real-Time Monitoring
 - Agent Performance Analytics
 
----
 
-# Authors
 
-Developed as part of a Hackathon Project.
-
-Team FinPilot AI
-
----
-
-# License
-
-This project is developed for educational, research, and hackathon demonstration purposes.
