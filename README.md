@@ -43,46 +43,8 @@ This creates a secure, explainable and enterprise-ready AI system.
 # AI Agent Architecture
 
 ```
-                        AI Orchestrator
-                               │
-                               ▼
-                     Customer Investigation
-                               │
-                               ▼
-        Agent 1 - Intelligent Case Intake
-                               │
-                               ▼
-      Agent 2 - Enterprise Context Retrieval
-                               │
-                               ▼
-      Agent 3 - Decision Intelligence Agent
-                               │
-                               ▼
-     Agent 4 - Zero Trust Validation Agent
-             │
-     PASS ───┴────────► Continue
-             │
-          REVISE
-             │
-             ▼
-      Agent 3 Re-Reasoning
-             │
-             ▼
-      Agent 5 - Shadow Simulation
-             │
-             ▼
-      Agent 6 - Privacy Engine
-             │
-             ▼
- Agent 7 - Policy Guardrail & Risk Assessment
-             │
-     AUTO / HUMAN / BLOCK
-             │
-             ▼
-      Execution / Human Approval
-             │
-             ▼
-      Agent 8 - Audit & Compliance
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/ba0dc1e3-614c-4874-b887-bdc284a3a213" />
+
 ```
 
 ---
