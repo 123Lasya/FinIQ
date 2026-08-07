@@ -41,7 +41,7 @@ This creates a secure, explainable and enterprise-ready AI system.
 ---
 
 # AI Agent Architecture
-<img width="1416" height="724" alt="image" src="https://github.com/user-attachments/assets/31e5abba-0e77-4bc9-b579-255b6c0140f0" />
+
 
 
 
