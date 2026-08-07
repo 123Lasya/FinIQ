@@ -1,0 +1,15 @@
+FINPILOT ENTERPRISE FINANCIAL OPERATIONS POLICY (SOP-2026-V1)
+
+1. OVERVIEW & SCOPE
+This document outlines standard operating procedures for resolving financial complaints, duplicate transactions, and customer refunds.
+
+2. DISPUTE CATEGORIES & REFUND GUIDELINES
+- Double Charge / Duplicate Debit: When a customer is billed twice for the same transaction ID, full refund of the duplicate amount is mandatory.
+- Autonomous Approval Threshold: Single dispute refund claims equal to or under ₹25,000 INR (or equivalent) may be automatically processed by the AI Execution Agent if Zero Trust verification passes with >0.85 confidence.
+- Mandatory Human Approval Threshold: Single dispute refund claims exceeding ₹25,000 INR (e.g., ₹50,000 INR double charge claims) CANNOT be auto-executed. They MUST be routed to an authorized Operations Executive for Human-in-the-Loop review and approval.
+
+3. PRIVACY & DATA PROTECTION (ZERO KNOWLEDGE)
+All customer complaints must pass through the Zero Knowledge Privacy Engine. PII including PAN, Aadhaar, Credit Card 16-digit numbers, CVC, passwords, and phone numbers must be redacted prior to external AI processing.
+
+4. AUDIT & FRAUD CONTROL
+Every investigation token generates an immutable cryptographically hashed audit trail. Any duplicate dispute submitted within 30 days is automatically flagged for Fraud Analysis.
