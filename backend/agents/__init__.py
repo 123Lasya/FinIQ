@@ -1,22 +1,24 @@
-from backend.agents.base import BaseAgent
-from backend.agents.intake_agent import IntelligentCaseIntakeAgent
-from backend.agents.privacy_engine_agent import ZeroKnowledgePrivacyEngine
-from backend.agents.context_retrieval_agent import EnterpriseContextRetrievalAgent
-from backend.agents.decision_intelligence_agent import DecisionIntelligenceAgent
-from backend.agents.zero_trust_validation_agent import ZeroTrustDecisionValidationAgent
-from backend.agents.shadow_simulation_agent import PreFlightShadowSimulationAgent
-from backend.agents.policy_guardrail_agent import PolicyGuardrailAgent
-from backend.agents.execution_agent import ExecutionAgent
-from backend.agents.audit_agent import AuditAgent
+from backend.agents.agent_context import AgentContext
+from backend.agents.base_agent import BaseAgent
+from backend.agents.agent_1_intake import IntelligentCaseIntakeAgent
+from backend.agents.agent_2_context import EnterpriseContextRetrievalAgent
+from backend.agents.agent_3_decision import DecisionIntelligenceAgent
+from backend.agents.agent_4_zero_trust import ZeroTrustDecisionValidationAgent
+from backend.agents.agent_5_shadow import PreFlightShadowSimulationAgent
+from backend.agents.agent_6_privacy import ZeroKnowledgePrivacyEngine
+from backend.agents.agent_7_guardrail import PolicyGuardrailAgent
+from backend.agents.agent_8_execution import ExecutionAgent
+from backend.agents.agent_9_audit import AuditAgent
 
 __all__ = [
+    "AgentContext",
     "BaseAgent",
     "IntelligentCaseIntakeAgent",
-    "ZeroKnowledgePrivacyEngine",
     "EnterpriseContextRetrievalAgent",
     "DecisionIntelligenceAgent",
     "ZeroTrustDecisionValidationAgent",
     "PreFlightShadowSimulationAgent",
+    "ZeroKnowledgePrivacyEngine",
     "PolicyGuardrailAgent",
     "ExecutionAgent",
     "AuditAgent",

@@ -3,7 +3,8 @@ from pydantic import BaseModel, EmailStr
 
 
 class LoginRequest(BaseModel):
-    employee_id: str
+    email: Optional[str] = None
+    employee_id: Optional[str] = None
     password: str
 
 
@@ -16,6 +17,9 @@ class Token(BaseModel):
     full_name: str
 
 
+LoginResponse = Token
+
+
 class TokenData(BaseModel):
     employee_id: Optional[str] = None
     email: Optional[str] = None
@@ -23,7 +27,6 @@ class TokenData(BaseModel):
 
 
 class UserRead(BaseModel):
-    id: int
     employee_id: str
     email: EmailStr
     full_name: str

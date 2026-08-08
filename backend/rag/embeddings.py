@@ -12,9 +12,11 @@ class EmbeddingService:
     def __init__(self, model_name: str = None):
         self.model_name = model_name or settings.EMBEDDING_MODEL_NAME
         self._model = None
-        self._load_model()
 
     def _load_model(self):
+        if self._model is not None:
+            return self._model
+
         try:
             from sentence_transformers import SentenceTransformer
             logger.info(f"Loading SentenceTransformers embedding model: {self.model_name}")
@@ -23,11 +25,14 @@ class EmbeddingService:
             logger.warning(f"SentenceTransformers load warning ({e}). Active fallback embedding engine enabled.")
             self._model = None
 
+        return self._model
+
     def embed_query(self, text: str) -> List[float]:
         """Embeds single query string."""
-        if self._model is not None:
+        model = self._load_model()
+        if model is not None:
             try:
-                return self._model.encode(text, convert_to_numpy=True).tolist()
+                return model.encode(text, convert_to_numpy=True).tolist()
             except Exception as e:
                 logger.error(f"Embedding query error: {e}")
 
@@ -35,9 +40,10 @@ class EmbeddingService:
 
     def embed_documents(self, texts: List[str]) -> List[List[float]]:
         """Batch embeds multiple texts."""
-        if self._model is not None:
+        model = self._load_model()
+        if model is not None:
             try:
-                return self._model.encode(texts, convert_to_numpy=True).tolist()
+                return model.encode(texts, convert_to_numpy=True).tolist()
             except Exception as e:
                 logger.error(f"Batch embedding error: {e}")
 
