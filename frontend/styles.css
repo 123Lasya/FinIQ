@@ -686,8 +686,9 @@ body {
 /* AI Investigation Workspace Layout */
 .investigation-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 22px;
+  grid-template-columns: minmax(300px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
 }
 
 @media (max-width: 1100px) {
@@ -699,15 +700,23 @@ body {
 .sidebar-panel {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
+}
+
+.investigation-main-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
 }
 
 .panel-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 16px 18px;
   backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.18);
 }
 
 .panel-card-title {
@@ -725,9 +734,19 @@ body {
 .detail-row {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  align-items: center;
+  padding: 8px 0;
   font-size: 0.8rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: var(--transition);
+}
+
+.detail-row:hover {
+  color: var(--primary-cyan);
+  background: rgba(56, 189, 248, 0.04);
+  border-radius: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .detail-label {
